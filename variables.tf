@@ -41,3 +41,8 @@ variable "enabled" {
   description = "Set to false to prevent the module from creating any resources"
   default     = "true"
 }
+
+variable "enable_key_generation" {
+  description = "Set to false to prevent api key generation"
+  default     = "true"
+}

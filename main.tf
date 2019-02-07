@@ -19,6 +19,6 @@ resource "aws_iam_user" "default" {
 
 # Generate API credentials
 resource "aws_iam_access_key" "default" {
-  count = "${var.enabled == "true" ? 1 : 0}"
+  count = "${var.enabled == "true" && var.enable_key_generation == "true" ? 1  : 0}"
   user  = "${aws_iam_user.default.name}"
 }
